@@ -127,7 +127,31 @@ QEMU puede ser utilizado por sí solo o junto con otros gestores de máquinas vi
 - Compatible con muchas herramientas y entornos como Libvirt, virt-manager, Proxmox, OpenStack.
 - Soporte activo de la comunidad y contribución constante.
 
-!<img width="602" height="639" alt="image" src="https://github.com/user-attachments/assets/f1ce6879-9c7d-4fda-915f-430006fad5f9" />
+<img width="602" height="639" alt="image" src="https://github.com/user-attachments/assets/f1ce6879-9c7d-4fda-915f-430006fad5f9" />
+
+## escaneo con nmap 
+<img width="1308" height="138" alt="image" src="https://github.com/user-attachments/assets/45df8c59-5429-4bcb-a957-b66682ff6f99" />
+
+### Interpretación del escaneo Nmap
+
+- **Host is up (0.0000060s latency):**  
+  El host `192.168.42.252` está activo y responde a la red. La latencia muy baja indica que la comunicación fue rápida.
+
+- **All 1000 scanned ports are in ignored states:**  
+  Se escanearon los 1000 puertos TCP más comunes, pero todos estaban cerrados o filtrados, por lo que Nmap los ignora en el reporte principal.
+
+- **Not shown: 1000 closed tcp ports (reset):**  
+  Todos los puertos respondieron con un RST (reset), lo que significa que **no hay servicios TCP escuchando** en esos puertos.
+
+- **Service detection performed:**  
+  Nmap intentó identificar servicios y versiones en puertos abiertos, pero al no encontrar ninguno, no se detectó ningún servicio.
+
+### Conclusión
+
+1. El host está **activo** en la red.
+2. No se encontraron servicios TCP escuchando en los puertos escaneados.
+3. Para buscar servicios adicionales, sería necesario escanear otros puertos o protocolos (por ejemplo UDP o puertos no estándar).
+
 
 
 
